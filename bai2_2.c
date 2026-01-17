@@ -26,7 +26,7 @@ int main()
 {
 
     // Khai báo biến
-    float a, b, c, x, delta;
+    float a, b, c, x, delta = 0.00;
     // Nhập dữ liệu
     printf("Nhap a: ");
     scanf("%f", &a);
@@ -41,36 +41,42 @@ int main()
     {
         if (b == 0)
         {
-            x = (-c / b);
-            printf("Nghiem cua pt la: %.2f", x);
-        }
-        else if (c == 0)
-        {
-            printf("Phuong trinh vo so nghiem");
+            if (c == 0)
+            {
+                printf("Phuong trinh %.2fx*x + %.2fx + %.2f vo so nghiem", a, b, c);
+            }
+            else
+            {
+                printf("Phuong trinh %.2fx*x + %.2fx + %.2f vo nghiem", a, b, c);
+            }
         }
         else
         {
-            printf("Phuong trinh vo nghiem");
+            x = (-c) / b;
+            printf("Nghiem cua phuong trinh %.2fx*x + %.2fx + %.2f la: %.2f", a, b, c, x);
         }
     }
     else
     {
         delta = b * b - 4 * a * c;
+        printf("Gia tri cua delta: %.2f\n", delta);
         if (delta == 0)
         {
             x = -b / (2 * a);
+            printf("Nghiem cua phuong trinh %.2fx*x + %.2fx + %.2f la: %.2f", a, b, c, x);
         }
         else if (delta > 0)
         {
-            printf("Phuong trinh co 2 nghiem la: \n");
+            printf("Phuong trinh %.2fx*x + %.2fx + %.2f co 2 nghiem la: \n", a, b, c);
             x = (-b + sqrt(delta)) / (2 * a);
-            printf("Nghiem 1: %.2f\n", x);
+            printf("Nghiem x1: %.2f\n", x);
             x = (-b - sqrt(delta)) / (2 * a);
-            printf("Nghiem 2: %.2f\n", x);
+            printf("Nghiem x2: %.2f\n", x);
         }
         else
         {
-            printf("Phuong trinh vo nghiem");
+            printf("Phuong trinh %.2fx*x + %.2fx + %.2f vo nghiem", a, b, c);
         }
     }
+    return 0;
 }

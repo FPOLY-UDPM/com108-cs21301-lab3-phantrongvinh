@@ -35,16 +35,18 @@ int main()
     {
         if (b == 0)
         {
-            printf("Phuong trinh vo so nghiem");
+            printf("Phuong trinh %.2fx + %.2f = 0 vo so nghiem", a, b);
         }
         else
         {
-            printf("Phuong trinh vo nghiem");
+            printf("Phuong trinh %.2fx + %.2f = 0 vo nghiem", a, b);
         }
     }
     else
     {
         x = (-b) / a;
-        printf("Nghiem cua x la: %.2f", x);
+        printf("Nghiem cua %.2fx + %.2f = 0 la: %.2f", a, b, x);
     }
+
+    return 0;
 }
