@@ -1,30 +1,52 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: Phan Trọng Vinh
+ * MSSV:      PS49909
+ * Lớp:       CS21301
  *****************************************************************************/
 
-//  BÀI 2: XÂY DỰNG CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH  
-//  2.1 BẬC 1 
-//  Phương trình có dạng ax + b = 0 
-//  Input: nhập vào từ bàn phím giá trị của a, b 
-//  Output: Hiển thị nghiệm của phương trình 
-//  Biết rằng: 
-//  Nếu a == 0,  
-//   b == 0: Phương trình có vô số nghiệm 
-//   b != 0: Phương trình vô nghiệm 
-//  Ngược lại: Phương trình có nghiệm x = -b/a 
- 
+//  BÀI 2: XÂY DỰNG CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH
+//  2.1 BẬC 1
+//  Phương trình có dạng ax + b = 0
+//  Input: nhập vào từ bàn phím giá trị của a, b
+//  Output: Hiển thị nghiệm của phương trình
+//  Biết rằng:
+//  Nếu a == 0,
+//   b == 0: Phương trình có vô số nghiệm
+//   b != 0: Phương trình vô nghiệm
+//  Ngược lại: Phương trình có nghiệm x = -b/a
+
 #include <stdio.h>
 
-int main(){
-    
-    // Khai báo biến
+int main()
+{
 
+    // Khai báo biến
+    float a, b, x = 0;
 
     // Nhập dữ liệu
+    printf("Nhap bien a: ");
+    scanf("%f", &a);
 
+    printf("Nhap bien b: ");
+    scanf("%f", &b);
 
-    // Xử lý, tính toán VÀ Hiển thị kết quả
+    // Xử lý, tính toán VÀ Hiển thị kết
+    if (a == 0)
+    {
+        if (b == 0)
+        {
+            printf("Phuong trinh %.2fx + %.2f = 0 vo so nghiem", a, b);
+        }
+        else
+        {
+            printf("Phuong trinh %.2fx + %.2f = 0 vo nghiem", a, b);
+        }
+    }
+    else
+    {
+        x = (-b) / a;
+        printf("Nghiem cua %.2fx + %.2f = 0 la: %.2f", a, b, x);
+    }
 
+    return 0;
 }
