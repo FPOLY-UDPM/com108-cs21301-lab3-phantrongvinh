@@ -163,15 +163,15 @@ void tinhTienDien()
     }
     else if (tongSoDienMotThang >= 201 && tongSoDienMotThang < 301)
     {
-        giaTienDien = 50 * 1984 + 50 * 2050 + 50 * 2380 + (tongSoDienMotThang - 50 * 3) * 2998;
+        giaTienDien = 50 * 1984 + 50 * 2050 + 100 * 2380 + (tongSoDienMotThang - 50 * 4) * 2998;
     }
     else if (tongSoDienMotThang >= 301 && tongSoDienMotThang < 401)
     {
-        giaTienDien = 50 * 1984 + 50 * 2050 + 50 * 2380 + 50 * 2998 + (tongSoDienMotThang - 50 * 4) * 3350;
+        giaTienDien = 50 * 1984 + 50 * 2050 + 100 * 2380 + 100 * 2998 + (tongSoDienMotThang - 50 * 6) * 3350;
     }
     else
     {
-        giaTienDien = 50 * 1984 + 50 * 2050 + 50 * 2380 + 50 * 2998 + 50 * 3350 + (tongSoDienMotThang - 50 * 5) * 3460;
+        giaTienDien = 50 * 1984 + 50 * 2050 + 100 * 2380 + 100 * 2998 + 100 * 3350 + (tongSoDienMotThang - 50 * 8) * 3460;
     }
 
     giaTienDienSauThue = giaTienDien + (giaTienDien * 8 / 100);
